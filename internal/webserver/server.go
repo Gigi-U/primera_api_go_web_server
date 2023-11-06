@@ -1,5 +1,5 @@
 package webserver
-
+/* 
 import "github.com/gin-gonic/gin"
 
 func WebServer() {
@@ -14,4 +14,4 @@ func WebServer() {
 	// Corremos nuestro servidor sobre el puerto 8080
 	// http://localhost:8080/hello-world
 	router.Run()
-}
+} */

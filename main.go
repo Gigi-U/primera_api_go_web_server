@@ -8,7 +8,8 @@ import (
 
 func main(){
 		fmt.Println("\n----------Gin web framework---------------")
-	webserver.WebServer()
+	//webserver.WebServer()
+	webserver.Marshal()
 
 
 }
