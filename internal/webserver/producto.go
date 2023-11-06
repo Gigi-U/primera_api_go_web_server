@@ -6,9 +6,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 )
-const (
-	filename = "./productos.json"
-)
 type Producto struct {
     ID           	int     `json:"Id"`
     Nombre       	string  `json:"Nombre"`
