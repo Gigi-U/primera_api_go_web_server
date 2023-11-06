@@ -16,7 +16,7 @@ type Producto struct {
     FechaDeCreacion string 	`json:"FechaDeCreación"`
 }
 
-func Marshal() {
+func ObtenerProductos() {
 	//			  func gin.Default() *gin.Engine
 	router := gin.Default() 
 	// Captura la solicitud GET "/productos"

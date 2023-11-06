@@ -9,7 +9,7 @@ import (
 func main(){
 		fmt.Println("\n----------Gin web framework---------------")
 	//webserver.WebServer()
-	webserver.Marshal()
+	webserver.ObtenerProductos()
 
 
 }
