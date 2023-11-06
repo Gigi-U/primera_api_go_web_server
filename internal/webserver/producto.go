@@ -23,16 +23,22 @@ type Productos struct{
 }
 
 func Marshal() {
-	router := gin.Default()
+	//			  func gin.Default() *gin.Engine
+	router := gin.Default() 
 	// Captura la solicitud GET "/productos"
 	router.GET("/productos", func(c *gin.Context) {
 		// lee el archivo JSON, si hay algun error lo va a notificar sinó mostrará el json"
+		//func os.ReadFile(name string) ([]byte, error)
 		data, err := os.ReadFile("internal/webserver/productos.json")
         if err != nil {
+		//	   JSON: func (*gin.Context).JSON(code int, obj any) 
+		//                | H: type H map[string]any
             c.JSON(500, gin.H{"error": "No se pudo cargar el archivo de productos.json"})
             return
         }
-        c.Data(200, "application/json", data)
+		// Data: func (*gin.Context).Data(code int, contentType string, data []byte)
+		c.Data(200, "application/json", data)
+		// imprimir el listado JSON por consola																			
 		fmt.Printf("Impresión de productos por Consola: %v",string(data))
 
 	})
