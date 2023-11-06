@@ -15,9 +15,6 @@ type Producto struct {
     Publicado    	bool   	`json:"Publicado"`
     FechaDeCreacion string 	`json:"FechaDeCreación"`
 }
-type Productos struct{
-	productos []Producto
-}
 
 func Marshal() {
 	//			  func gin.Default() *gin.Engine
