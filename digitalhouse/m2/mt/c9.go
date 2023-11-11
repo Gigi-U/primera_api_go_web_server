@@ -1,26 +1,28 @@
-package webserver
+package mt
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
 )
+// Producto es una estructura que define un producto
 type Producto struct {
-    ID           	int     `json:"Id"`
-    Nombre       	string  `json:"Nombre"`
-    Precio       	float64 `json:"Precio"`
-    Stock       	int     `json:"Stock"`
-    Codigo       	string  `json:"Codigo"`
-    Publicado    	bool   	`json:"Publicado"`
-    FechaDeCreacion string 	`json:"FechaDeCreación"`
+    ID           	int     `json:"id"`
+    Nombre       	string  `json:"nombre"`
+    Precio       	float64 `json:"precio"`
+    Stock       	int     `json:"stock"`
+    Codigo       	string  `json:"codigo"`
+    Publicado    	bool   	`json:"publicado"`
+    FechaDeCreacion string 	`json:"fecha_de_creación"`
 }
-
-func ObtenerProductos() {
+// sería main()
+ func ObtenerProductos() {
 	//			  func gin.Default() *gin.Engine
-	router := gin.Default() 
+	engine := gin.Default() 
 	// Captura la solicitud GET "/productos"
-	router.GET("/productos", func(c *gin.Context) {
+	engine.GET("/productos", func(c *gin.Context) {
 		// lee el archivo JSON, si hay algun error lo va a notificar sinó mostrará el json"
 		//func os.ReadFile(name string) ([]byte, error)
 		data, err := os.ReadFile("internal/webserver/productos.json")
@@ -31,13 +33,13 @@ func ObtenerProductos() {
             return
         }
 		// Data: func (*gin.Context).Data(code int, contentType string, data []byte)
-		c.Data(200, "application/json", data)
+		c.Data(http.StatusOK, "application/json", data)
 		// imprimir el listado JSON por consola																			
 		fmt.Printf("Impresión de productos por Consola: %v",string(data))
 
 	})
 	// Corremos nuestro servidor sobre el puerto 8080
 	// http://localhost:8080/productos	
-	router.Run()
+	engine.Run()
 
 }

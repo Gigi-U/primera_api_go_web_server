@@ -3,13 +3,23 @@ package main
 import (
 	"fmt"
 
-	"github.com/Gigi-U/primera_api_go_web_server.git/internal/webserver"
+	"github.com/Gigi-U/primera_api_go_web_server.git/digitalhouse/m2/mt"
+	"github.com/Gigi-U/primera_api_go_web_server.git/digitalhouse/m2/pg"
+	"github.com/Gigi-U/primera_api_go_web_server.git/digitalhouse/m2/professor"
 )
 
 func main(){
 		fmt.Println("\n----------Gin web framework---------------")
-	//webserver.WebServer()
-	webserver.ObtenerProductos()
+	fmt.Println("\n----------CLASE 9---------------")
+	pg.WebServer()
+	professor.ObtenerPersonas()
+	mt.ObtenerProductos()
+	fmt.Println("\n----------CLASE 10---------------")
+	professor.GetProducto()
+	fmt.Println("\n----------CLASE 11---------------")
+	fmt.Println("\n----------CLASE 12---------------")
+	fmt.Println("\n----------CLASE 13---------------")
+
 
 
 }
@@ -23,11 +33,6 @@ Este contiene un conjunto de funcionalidades (por ejemplo: routing, middleware, 
 2) clonar repositorio
 3) go mod init github.com/MiUsuario/nombreDeMiRepo
 4) go get -u github.com/gin-gonic/gin
-
-PRUEBA TERMINAL =
-
-{"message":"Hello World!"}
-
 
 
 */

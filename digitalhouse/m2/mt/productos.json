@@ -1,0 +1,58 @@
+{
+    "Productos":[
+        {
+            "id": 1,
+            "nombre":           "Producto1",
+            "precio":           200000.00,
+            "stock":            20,
+            "codigo":           "jfHbR3zE",
+            "publicado":        true,
+            "fechaDeCreacion":  "2023-10-06"
+        },
+        {
+            "id": 2,
+            "nombre":           "Producto2",
+            "precio":           30000.00,     
+            "Stock":            20,
+            "Codigo":           "jfHbR3zz",
+            "Publicado":         true,
+            "FechaDeCreacion":  "2023-11-06"
+        },
+        {
+            "Id": 3,
+            "Nombre":           "Producto3",
+            "Precio":           100000.00,     
+            "stock":            200,
+            "codigo":           "jfHAR3zz",
+            "Publicado":         true,
+            "FechaDeCreacion":  "2023-07-06"
+        },
+        {
+            "Id": 4,
+            "Nombre":           "Producto4",
+            "Precio":           30000.00,     
+            "stock":            3,
+            "codigo":           "jfHbRRzz",
+            "publicado":         true,
+            "fecha_de_creacion":  "2023-01-06"
+        },
+        {
+            "id": 5,
+            "Nombre":           "Producto5",
+            "Precio":           30000.00,     
+            "stock":            0,
+            "codigo":           "jfHAH3zz",
+            "publicado":         true,
+            "fecha_de_creacion":  "2022-12-06"
+        },
+        {
+            "id": 6,
+            "nombre":           "Producto6",
+            "precio":           300000.00,     
+            "stock":            10,
+            "codigo":           "FRfHbR3zz",
+            "publicado":         false,
+            "fecha_de_creacion":  "2021-12-06"
+        }
+    ]
+}
