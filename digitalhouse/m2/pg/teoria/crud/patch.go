@@ -90,3 +90,7 @@ func MyPatch() {
 
 	r.Run(":8080")
 }
+
+// ver galeria validatos- 
+
+//^ se usa PATCH si tenemos q modificar 1 o 2 atributos de 30 , x ejemplo. sino se usa el PUT
